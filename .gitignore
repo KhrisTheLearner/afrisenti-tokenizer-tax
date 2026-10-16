@@ -1,0 +1,24 @@
+# Rebuilt by the notebooks from the pinned AfriSenti files. They hold the tweets themselves, so they are not stored here.
+data/afrisenti_normalized.parquet
+data/kin_test_retyped.csv
+results/near_copies_test_tweets.csv
+
+# The fine-tuned Kinyarwanda and Swahili models, about 7 GB, and the LaBSE embeddings, about 300 MB, rebuilt by the grid script
+models/
+data/labse_*.npz
+
+.venv/
+.idea/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# LaTeX build files
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz

@@ -1,0 +1,16 @@
+\begin{tabular}{lllrrr}
+\toprule
+Test & Predictor & Outcome & $\rho$ & 95\% interval & $p$ \\
+\midrule
+primary & AfroXLMR tokens per word & AfroXLMR $-$ TF-IDF & 0.00 & [-0.72, 0.69] & 1.000 \\
+exploratory & LaBSE tokens per word & LaBSE $-$ TF-IDF & 0.13 & [-0.60, 0.71] & 0.675 \\
+exploratory & word OOV rate & AfroXLMR $-$ TF-IDF & 0.04 & [-0.55, 0.58] & 0.902 \\
+exploratory & word OOV rate & LaBSE $-$ TF-IDF & 0.48 & [-0.16, 0.88] & 0.122 \\
+exploratory & training set size (log) & AfroXLMR $-$ TF-IDF & 0.13 & [-0.56, 0.69] & 0.680 \\
+exploratory & training set size (log) & LaBSE $-$ TF-IDF & -0.53 & [-0.93, 0.20] & 0.082 \\
+exploratory & AfroXLMR tokens per word & AfroXLMR $-$ LaBSE & 0.11 & [-0.47, 0.64] & 0.735 \\
+partial, given size & AfroXLMR tokens per word & AfroXLMR $-$ TF-IDF & -0.03 & [-0.77, 0.70] &  \\
+partial, given size & LaBSE tokens per word & LaBSE $-$ TF-IDF & 0.25 & [-0.72, 0.79] &  \\
+exploratory & AfroXLMR tokens per word & LaBSE tokens per word & 0.88 & [0.57, 0.98] & $<$0.001 \\
+\bottomrule
+\end{tabular}

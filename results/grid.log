@@ -1,0 +1,211 @@
+nohup: ignoring input
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791740666.667727    2191 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[17:44:32] device cuda; {"python": "3.12.9", "numpy": "2.3.5", "pandas": "3.0.3", "scikit_learn": "1.8.0", "torch": "2.12.1+cu130", "transformers": "4.57.6", "sentence_transformers": "5.6.0", "gpu": "NVIDIA RTX 4000 Ada Generation", "parquet_commit": "676cfb15a6761c643d860dcb53bac976e5db2dfc", "afroxlmr_commit": "25f27299c247a6b73a767bd82d12444138b19337", "labse_commit": "836121a0533e5664b21c7aacc5d22951f2b8b25b"}
+[17:44:32] === kin: 3241 train, 827 validation, 1026 test ===
+[17:44:32] kin tfidf: already done, skipped
+[17:44:32] kin labse: already done, skipped
+[17:44:32] kin afroxlmr: all seeds already done, skipped
+[17:44:32] kin check tfidf: accuracy 0.5965 against e501 0.5965, macro F1 0.6006 against 0.6006: PASS
+[17:44:32] kin check labse: accuracy 0.6433 against e501 0.6433, macro F1 0.6484 against 0.6484: PASS
+[17:44:32] kin check afroxlmr: accuracy 0.6582 against e501 0.6590, macro F1 0.6613 against 0.6620, seeds [0.6685, 0.6496, 0.6657], sd 0.0102: PASS
+[17:44:32] === swa: 1806 train, 453 validation, 748 test ===
+[17:44:34] recorded swa tfidf seed 42 validation: {'accuracy': 0.5563, 'macro_f1': 0.4806}
+[17:44:34] recorded swa tfidf seed 42 test: {'accuracy': 0.5628, 'macro_f1': 0.4815, 'train_time_s': 1.6699, 'n_features': 28943, 'device': 'cpu'}
+[17:44:46] loaded sentence-transformers/LaBSE on cuda in 11.6 s
+[17:44:49] recorded swa labse seed 42 validation: {'accuracy': 0.5386, 'macro_f1': 0.4879}
+[17:44:49] recorded swa labse seed 42 test: {'accuracy': 0.5495, 'macro_f1': 0.5254, 'train_time_s': 2.9364, 'encode_time_s': 2.7354, 'fit_time_s': 0.201, 'peak_gpu_gib': 1.9128, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[17:51:03] swa afroxlmr seed 42: trained in 366 s, peak 4.31 GiB; train loss by epoch 0.9167, 0.8243, 0.7285; validation macro F1 by epoch 0.3264, 0.3880, 0.4025; best epoch 3
+[17:51:06] recorded swa afroxlmr seed 42 validation: {'accuracy': 0.6049, 'macro_f1': 0.4025, 'best_epoch': 3}
+[17:51:06] recorded swa afroxlmr seed 42 test: {'accuracy': 0.6176, 'macro_f1': 0.4341, 'train_time_s': 365.9641, 'peak_gpu_gib': 4.3136, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[17:55:58] swa afroxlmr seed 43: trained in 291 s, peak 4.30 GiB; train loss by epoch 0.9178, 0.8081, 0.7346; validation macro F1 by epoch 0.2667, 0.3835, 0.4143; best epoch 3
+[17:56:01] recorded swa afroxlmr seed 43 validation: {'accuracy': 0.6225, 'macro_f1': 0.4143, 'best_epoch': 3}
+[17:56:01] recorded swa afroxlmr seed 43 test: {'accuracy': 0.6297, 'macro_f1': 0.4599, 'train_time_s': 291.0495, 'peak_gpu_gib': 4.2965, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[17:56:25] swa afroxlmr seed 44: trained in 23 s, peak 4.30 GiB; train loss by epoch 0.9130, 0.8015, 0.7163; validation macro F1 by epoch 0.2802, 0.4010, 0.4948; best epoch 3
+[17:56:28] recorded swa afroxlmr seed 44 validation: {'accuracy': 0.6093, 'macro_f1': 0.4948, 'best_epoch': 3}
+[17:56:28] recorded swa afroxlmr seed 44 test: {'accuracy': 0.6043, 'macro_f1': 0.5042, 'train_time_s': 23.2147, 'peak_gpu_gib': 4.3024, 'best_epoch': 3, 'device': 'cuda'}
+[17:56:29] === tso: 804 train, 203 validation, 254 test ===
+[17:56:29] recorded tso tfidf seed 42 validation: {'accuracy': 0.5961, 'macro_f1': 0.5386}
+[17:56:29] recorded tso tfidf seed 42 test: {'accuracy': 0.5315, 'macro_f1': 0.4857, 'train_time_s': 0.5316, 'n_features': 9284, 'device': 'cpu'}
+[17:56:32] loaded sentence-transformers/LaBSE on cuda in 2.7 s
+[17:56:33] recorded tso labse seed 42 validation: {'accuracy': 0.4729, 'macro_f1': 0.4446}
+[17:56:33] recorded tso labse seed 42 test: {'accuracy': 0.4528, 'macro_f1': 0.4156, 'train_time_s': 0.8111, 'encode_time_s': 0.7775, 'fit_time_s': 0.0336, 'peak_gpu_gib': 1.9466, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:08:15] tso afroxlmr seed 42: trained in 700 s, peak 4.45 GiB; train loss by epoch 1.0535, 1.0059, 0.9659; validation macro F1 by epoch 0.2140, 0.2422, 0.2852; best epoch 3
+[18:08:15] recorded tso afroxlmr seed 42 validation: {'accuracy': 0.4877, 'macro_f1': 0.2852, 'best_epoch': 3}
+[18:08:15] recorded tso afroxlmr seed 42 test: {'accuracy': 0.5039, 'macro_f1': 0.3049, 'train_time_s': 700.2194, 'peak_gpu_gib': 4.4451, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:08:32] tso afroxlmr seed 43: trained in 15 s, peak 4.45 GiB; train loss by epoch 1.0571, 0.9964, 0.9797; validation macro F1 by epoch 0.2132, 0.2730, 0.2634; best epoch 2
+[18:08:32] recorded tso afroxlmr seed 43 validation: {'accuracy': 0.4828, 'macro_f1': 0.273, 'best_epoch': 2}
+[18:08:32] recorded tso afroxlmr seed 43 test: {'accuracy': 0.4843, 'macro_f1': 0.2771, 'train_time_s': 15.2201, 'peak_gpu_gib': 4.4459, 'best_epoch': 2, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:08:49] tso afroxlmr seed 44: trained in 16 s, peak 4.44 GiB; train loss by epoch 1.0225, 1.0000, 0.9843; validation macro F1 by epoch 0.2264, 0.2583, 0.3159; best epoch 3
+[18:08:49] recorded tso afroxlmr seed 44 validation: {'accuracy': 0.468, 'macro_f1': 0.3159, 'best_epoch': 3}
+[18:08:49] recorded tso afroxlmr seed 44 test: {'accuracy': 0.5079, 'macro_f1': 0.3399, 'train_time_s': 15.6543, 'peak_gpu_gib': 4.4428, 'best_epoch': 3, 'device': 'cuda'}
+[18:08:49] === arq: 1649 train, 414 validation, 958 test ===
+[18:08:51] recorded arq tfidf seed 42 validation: {'accuracy': 0.6304, 'macro_f1': 0.5931}
+[18:08:51] recorded arq tfidf seed 42 test: {'accuracy': 0.5678, 'macro_f1': 0.5268, 'train_time_s': 1.2336, 'n_features': 21700, 'device': 'cpu'}
+[18:08:53] loaded sentence-transformers/LaBSE on cuda in 2.4 s
+[18:08:56] recorded arq labse seed 42 validation: {'accuracy': 0.529, 'macro_f1': 0.517}
+[18:08:56] recorded arq labse seed 42 test: {'accuracy': 0.5992, 'macro_f1': 0.5678, 'train_time_s': 2.1945, 'encode_time_s': 2.1428, 'fit_time_s': 0.0517, 'peak_gpu_gib': 1.9358, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:10:53] arq afroxlmr seed 42: trained in 115 s, peak 4.26 GiB; train loss by epoch 0.9919, 0.8855, 0.7999; validation macro F1 by epoch 0.2781, 0.5132, 0.5122; best epoch 2
+[18:10:53] recorded arq afroxlmr seed 42 validation: {'accuracy': 0.6304, 'macro_f1': 0.5132, 'best_epoch': 2}
+[18:10:53] recorded arq afroxlmr seed 42 test: {'accuracy': 0.6503, 'macro_f1': 0.52, 'train_time_s': 114.9542, 'peak_gpu_gib': 4.2621, 'best_epoch': 2, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:17:51] arq afroxlmr seed 43: trained in 416 s, peak 4.27 GiB; train loss by epoch 0.9973, 0.9310, 0.8587; validation macro F1 by epoch 0.2757, 0.3892, 0.4645; best epoch 3
+[18:17:51] recorded arq afroxlmr seed 43 validation: {'accuracy': 0.5894, 'macro_f1': 0.4645, 'best_epoch': 3}
+[18:17:51] recorded arq afroxlmr seed 43 test: {'accuracy': 0.6461, 'macro_f1': 0.5097, 'train_time_s': 416.2498, 'peak_gpu_gib': 4.2695, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:20:11] arq afroxlmr seed 44: trained in 138 s, peak 4.26 GiB; train loss by epoch 0.9719, 0.8299, 0.7257; validation macro F1 by epoch 0.3870, 0.5857, 0.5722; best epoch 2
+[18:20:11] recorded arq afroxlmr seed 44 validation: {'accuracy': 0.6522, 'macro_f1': 0.5857, 'best_epoch': 2}
+[18:20:11] recorded arq afroxlmr seed 44 test: {'accuracy': 0.6566, 'macro_f1': 0.5649, 'train_time_s': 138.0206, 'peak_gpu_gib': 4.2621, 'best_epoch': 2, 'device': 'cuda'}
+[18:20:12] === por: 3030 train, 767 validation, 3662 test ===
+[18:20:16] recorded por tfidf seed 42 validation: {'accuracy': 0.6232, 'macro_f1': 0.6038}
+[18:20:16] recorded por tfidf seed 42 test: {'accuracy': 0.6174, 'macro_f1': 0.5445, 'train_time_s': 3.2402, 'n_features': 40350, 'device': 'cpu'}
+[18:20:18] loaded sentence-transformers/LaBSE on cuda in 2.5 s
+[18:20:26] recorded por labse seed 42 validation: {'accuracy': 0.6362, 'macro_f1': 0.6337}
+[18:20:26] recorded por labse seed 42 test: {'accuracy': 0.6185, 'macro_f1': 0.5815, 'train_time_s': 5.942, 'encode_time_s': 5.7085, 'fit_time_s': 0.2336, 'peak_gpu_gib': 2.0397, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:23:20] por afroxlmr seed 42: trained in 173 s, peak 4.56 GiB; train loss by epoch 0.9770, 0.8079, 0.7088; validation macro F1 by epoch 0.5439, 0.6104, 0.6396; best epoch 3
+[18:23:22] recorded por afroxlmr seed 42 validation: {'accuracy': 0.6545, 'macro_f1': 0.6396, 'best_epoch': 3}
+[18:23:22] recorded por afroxlmr seed 42 test: {'accuracy': 0.6371, 'macro_f1': 0.593, 'train_time_s': 172.6464, 'peak_gpu_gib': 4.558, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:25:21] por afroxlmr seed 43: trained in 62 s, peak 4.57 GiB; train loss by epoch 1.0091, 0.8460, 0.7523; validation macro F1 by epoch 0.3583, 0.5805, 0.6378; best epoch 3
+[18:25:22] recorded por afroxlmr seed 43 validation: {'accuracy': 0.6571, 'macro_f1': 0.6378, 'best_epoch': 3}
+[18:25:22] recorded por afroxlmr seed 43 test: {'accuracy': 0.6256, 'macro_f1': 0.5752, 'train_time_s': 62.458, 'peak_gpu_gib': 4.5729, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:26:00] por afroxlmr seed 44: trained in 36 s, peak 4.55 GiB; train loss by epoch 0.9418, 0.7615, 0.6845; validation macro F1 by epoch 0.6088, 0.6457, 0.6541; best epoch 3
+[18:26:54] recorded por afroxlmr seed 44 validation: {'accuracy': 0.6714, 'macro_f1': 0.6541, 'best_epoch': 3}
+[18:26:54] recorded por afroxlmr seed 44 test: {'accuracy': 0.6521, 'macro_f1': 0.6025, 'train_time_s': 36.4079, 'peak_gpu_gib': 4.5531, 'best_epoch': 3, 'device': 'cuda'}
+[18:26:55] === twi: 3212 train, 388 validation, 949 test ===
+[18:27:00] recorded twi tfidf seed 42 validation: {'accuracy': 0.6443, 'macro_f1': 0.5818}
+[18:27:00] recorded twi tfidf seed 42 test: {'accuracy': 0.6259, 'macro_f1': 0.5556, 'train_time_s': 4.8085, 'n_features': 29100, 'device': 'cpu'}
+[18:27:03] loaded sentence-transformers/LaBSE on cuda in 2.4 s
+[18:28:38] recorded twi labse seed 42 validation: {'accuracy': 0.4639, 'macro_f1': 0.4359}
+[18:28:38] recorded twi labse seed 42 test: {'accuracy': 0.5068, 'macro_f1': 0.477, 'train_time_s': 3.2213, 'encode_time_s': 2.4458, 'fit_time_s': 0.7756, 'peak_gpu_gib': 1.9746, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:33:19] twi afroxlmr seed 42: trained in 279 s, peak 4.90 GiB; train loss by epoch 1.0076, 0.9370, 0.8749; validation macro F1 by epoch 0.3439, 0.3960, 0.4103; best epoch 3
+[18:33:20] recorded twi afroxlmr seed 42 validation: {'accuracy': 0.5799, 'macro_f1': 0.4103, 'best_epoch': 3}
+[18:33:20] recorded twi afroxlmr seed 42 test: {'accuracy': 0.5911, 'macro_f1': 0.4191, 'train_time_s': 279.1175, 'peak_gpu_gib': 4.8993, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:35:23] twi afroxlmr seed 43: trained in 122 s, peak 4.89 GiB; train loss by epoch 1.0096, 0.9222, 0.8651; validation macro F1 by epoch 0.3483, 0.4066, 0.4143; best epoch 3
+[18:35:23] recorded twi afroxlmr seed 43 validation: {'accuracy': 0.5928, 'macro_f1': 0.4143, 'best_epoch': 3}
+[18:35:23] recorded twi afroxlmr seed 43 test: {'accuracy': 0.6122, 'macro_f1': 0.4299, 'train_time_s': 121.9415, 'peak_gpu_gib': 4.8911, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:37:31] twi afroxlmr seed 44: trained in 127 s, peak 4.88 GiB; train loss by epoch 0.9902, 0.9239, 0.8553; validation macro F1 by epoch 0.2826, 0.3975, 0.4245; best epoch 3
+[18:37:32] recorded twi afroxlmr seed 44 validation: {'accuracy': 0.6005, 'macro_f1': 0.4245, 'best_epoch': 3}
+[18:37:32] recorded twi afroxlmr seed 44 test: {'accuracy': 0.6196, 'macro_f1': 0.4417, 'train_time_s': 126.6502, 'peak_gpu_gib': 4.8832, 'best_epoch': 3, 'device': 'cuda'}
+[18:37:32] === pcm: 3875 train, 1281 validation, 4154 test ===
+[18:37:36] recorded pcm tfidf seed 42 validation: {'accuracy': 0.6698, 'macro_f1': 0.428}
+[18:37:36] recorded pcm tfidf seed 42 test: {'accuracy': 0.6567, 'macro_f1': 0.4444, 'train_time_s': 3.2281, 'n_features': 43260, 'device': 'cpu'}
+[18:37:39] loaded sentence-transformers/LaBSE on cuda in 2.3 s
+[18:39:33] recorded pcm labse seed 42 validation: {'accuracy': 0.5902, 'macro_f1': 0.4154}
+[18:39:33] recorded pcm labse seed 42 test: {'accuracy': 0.5843, 'macro_f1': 0.4356, 'train_time_s': 6.4398, 'encode_time_s': 6.045, 'fit_time_s': 0.3948, 'peak_gpu_gib': 1.9318, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:40:43] pcm afroxlmr seed 42: trained in 68 s, peak 4.31 GiB; train loss by epoch 0.7041, 0.5993, 0.5299; validation macro F1 by epoch 0.3741, 0.4703, 0.4697; best epoch 2
+[18:40:45] recorded pcm afroxlmr seed 42 validation: {'accuracy': 0.7463, 'macro_f1': 0.4703, 'best_epoch': 2}
+[18:40:45] recorded pcm afroxlmr seed 42 test: {'accuracy': 0.682, 'macro_f1': 0.4557, 'train_time_s': 67.9558, 'peak_gpu_gib': 4.3123, 'best_epoch': 2, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:41:57] pcm afroxlmr seed 43: trained in 71 s, peak 4.32 GiB; train loss by epoch 0.7148, 0.6102, 0.5498; validation macro F1 by epoch 0.4343, 0.4679, 0.4702; best epoch 3
+[18:41:58] recorded pcm afroxlmr seed 43 validation: {'accuracy': 0.7393, 'macro_f1': 0.4702, 'best_epoch': 3}
+[18:41:58] recorded pcm afroxlmr seed 43 test: {'accuracy': 0.6897, 'macro_f1': 0.4642, 'train_time_s': 70.6379, 'peak_gpu_gib': 4.3246, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:43:08] pcm afroxlmr seed 44: trained in 68 s, peak 4.31 GiB; train loss by epoch 0.6887, 0.5902, 0.5379; validation macro F1 by epoch 0.4388, 0.4761, 0.4750; best epoch 2
+[18:43:10] recorded pcm afroxlmr seed 44 validation: {'accuracy': 0.7338, 'macro_f1': 0.4761, 'best_epoch': 2}
+[18:43:10] recorded pcm afroxlmr seed 44 test: {'accuracy': 0.6892, 'macro_f1': 0.4722, 'train_time_s': 68.1853, 'peak_gpu_gib': 4.314, 'best_epoch': 2, 'device': 'cuda'}
+[18:43:10] === ary: 5581 train, 494 validation, 2961 test ===
+[18:43:21] recorded ary tfidf seed 42 validation: {'accuracy': 0.7308, 'macro_f1': 0.7261}
+[18:43:21] recorded ary tfidf seed 42 test: {'accuracy': 0.5903, 'macro_f1': 0.5772, 'train_time_s': 10.1099, 'n_features': 81109, 'device': 'cpu'}
+[18:43:23] loaded sentence-transformers/LaBSE on cuda in 2.4 s
+[18:44:25] recorded ary labse seed 42 validation: {'accuracy': 0.7206, 'macro_f1': 0.7173}
+[18:44:25] recorded ary labse seed 42 test: {'accuracy': 0.5086, 'macro_f1': 0.4798, 'train_time_s': 7.8957, 'encode_time_s': 7.2498, 'fit_time_s': 0.6459, 'peak_gpu_gib': 2.2383, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:46:58] ary afroxlmr seed 42: trained in 151 s, peak 4.89 GiB; train loss by epoch 0.7352, 0.5587, 0.4892; validation macro F1 by epoch 0.7295, 0.7691, 0.7736; best epoch 3
+[18:46:59] recorded ary afroxlmr seed 42 validation: {'accuracy': 0.7773, 'macro_f1': 0.7736, 'best_epoch': 3}
+[18:46:59] recorded ary afroxlmr seed 42 test: {'accuracy': 0.5586, 'macro_f1': 0.5373, 'train_time_s': 150.7146, 'peak_gpu_gib': 4.8917, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:48:23] ary afroxlmr seed 43: trained in 83 s, peak 4.88 GiB; train loss by epoch 0.7392, 0.5553, 0.4842; validation macro F1 by epoch 0.7004, 0.7510, 0.7481; best epoch 2
+[18:48:24] recorded ary afroxlmr seed 43 validation: {'accuracy': 0.7571, 'macro_f1': 0.751, 'best_epoch': 2}
+[18:48:24] recorded ary afroxlmr seed 43 test: {'accuracy': 0.5417, 'macro_f1': 0.5139, 'train_time_s': 82.5048, 'peak_gpu_gib': 4.8769, 'best_epoch': 2, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:50:41] ary afroxlmr seed 44: trained in 135 s, peak 4.90 GiB; train loss by epoch 0.7251, 0.5642, 0.4946; validation macro F1 by epoch 0.7190, 0.7336, 0.7457; best epoch 3
+[18:50:42] recorded ary afroxlmr seed 44 validation: {'accuracy': 0.753, 'macro_f1': 0.7457, 'best_epoch': 3}
+[18:50:42] recorded ary afroxlmr seed 44 test: {'accuracy': 0.5042, 'macro_f1': 0.49, 'train_time_s': 135.4572, 'peak_gpu_gib': 4.9008, 'best_epoch': 3, 'device': 'cuda'}
+[18:50:43] === amh: 5984 train, 1497 validation, 1999 test ===
+[18:50:55] recorded amh tfidf seed 42 validation: {'accuracy': 0.5564, 'macro_f1': 0.5344}
+[18:50:55] recorded amh tfidf seed 42 test: {'accuracy': 0.5018, 'macro_f1': 0.4692, 'train_time_s': 10.9313, 'n_features': 100864, 'device': 'cpu'}
+[18:50:57] loaded sentence-transformers/LaBSE on cuda in 2.4 s
+[18:51:08] recorded amh labse seed 42 validation: {'accuracy': 0.5798, 'macro_f1': 0.5812}
+[18:51:08] recorded amh labse seed 42 test: {'accuracy': 0.6388, 'macro_f1': 0.5687, 'train_time_s': 9.4023, 'encode_time_s': 9.0441, 'fit_time_s': 0.3582, 'peak_gpu_gib': 2.0134, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:52:52] amh afroxlmr seed 42: trained in 101 s, peak 4.49 GiB; train loss by epoch 0.9285, 0.8051, 0.7494; validation macro F1 by epoch 0.5032, 0.6016, 0.6027; best epoch 3
+[18:52:52] recorded amh afroxlmr seed 42 validation: {'accuracy': 0.6313, 'macro_f1': 0.6027, 'best_epoch': 3}
+[18:52:52] recorded amh afroxlmr seed 42 test: {'accuracy': 0.4867, 'macro_f1': 0.4944, 'train_time_s': 101.2188, 'peak_gpu_gib': 4.4921, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[18:58:04] amh afroxlmr seed 43: trained in 310 s, peak 4.49 GiB; train loss by epoch 0.9415, 0.8022, 0.7355; validation macro F1 by epoch 0.5934, 0.6005, 0.6063; best epoch 3
+[18:58:05] recorded amh afroxlmr seed 43 validation: {'accuracy': 0.6299, 'macro_f1': 0.6063, 'best_epoch': 3}
+[18:59:53] recorded amh afroxlmr seed 43 test: {'accuracy': 0.5333, 'macro_f1': 0.5221, 'train_time_s': 310.1651, 'peak_gpu_gib': 4.4916, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:03:31] amh afroxlmr seed 44: trained in 217 s, peak 4.50 GiB; train loss by epoch 0.9125, 0.7966, 0.7212; validation macro F1 by epoch 0.5942, 0.5999, 0.6037; best epoch 3
+[19:03:32] recorded amh afroxlmr seed 44 validation: {'accuracy': 0.6299, 'macro_f1': 0.6037, 'best_epoch': 3}
+[19:03:32] recorded amh afroxlmr seed 44 test: {'accuracy': 0.5458, 'macro_f1': 0.5308, 'train_time_s': 216.7024, 'peak_gpu_gib': 4.4968, 'best_epoch': 3, 'device': 'cuda'}
+[19:03:33] === yor: 8285 train, 2090 validation, 4515 test ===
+[19:03:53] recorded yor tfidf seed 42 validation: {'accuracy': 0.7488, 'macro_f1': 0.734}
+[19:03:53] recorded yor tfidf seed 42 test: {'accuracy': 0.746, 'macro_f1': 0.7333, 'train_time_s': 18.7036, 'n_features': 114241, 'device': 'cpu'}
+[19:03:55] loaded sentence-transformers/LaBSE on cuda in 2.4 s
+[19:05:08] recorded yor labse seed 42 validation: {'accuracy': 0.6847, 'macro_f1': 0.6686}
+[19:05:08] recorded yor labse seed 42 test: {'accuracy': 0.625, 'macro_f1': 0.6061, 'train_time_s': 17.8528, 'encode_time_s': 16.7225, 'fit_time_s': 1.1303, 'peak_gpu_gib': 2.2525, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:08:15] yor afroxlmr seed 42: trained in 129 s, peak 4.89 GiB; train loss by epoch 0.8865, 0.7023, 0.5905; validation macro F1 by epoch 0.6561, 0.6886, 0.6998; best epoch 3
+[19:08:18] recorded yor afroxlmr seed 42 validation: {'accuracy': 0.7263, 'macro_f1': 0.6998, 'best_epoch': 3}
+[19:08:18] recorded yor afroxlmr seed 42 test: {'accuracy': 0.6808, 'macro_f1': 0.6682, 'train_time_s': 128.9697, 'peak_gpu_gib': 4.8928, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:15:56] yor afroxlmr seed 43: trained in 456 s, peak 4.89 GiB; train loss by epoch 0.9047, 0.7092, 0.6006; validation macro F1 by epoch 0.6221, 0.6523, 0.6753; best epoch 3
+[19:15:59] recorded yor afroxlmr seed 43 validation: {'accuracy': 0.7057, 'macro_f1': 0.6753, 'best_epoch': 3}
+[19:15:59] recorded yor afroxlmr seed 43 test: {'accuracy': 0.6749, 'macro_f1': 0.6599, 'train_time_s': 456.2017, 'peak_gpu_gib': 4.8928, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:20:18] yor afroxlmr seed 44: trained in 258 s, peak 4.89 GiB; train loss by epoch 0.8846, 0.7045, 0.5979; validation macro F1 by epoch 0.6069, 0.6884, 0.6919; best epoch 3
+[19:20:21] recorded yor afroxlmr seed 44 validation: {'accuracy': 0.7201, 'macro_f1': 0.6919, 'best_epoch': 3}
+[19:20:21] recorded yor afroxlmr seed 44 test: {'accuracy': 0.6813, 'macro_f1': 0.6676, 'train_time_s': 257.5456, 'peak_gpu_gib': 4.8928, 'best_epoch': 3, 'device': 'cuda'}
+[19:20:22] === ibo: 10154 train, 1841 validation, 3682 test ===
+[19:20:34] recorded ibo tfidf seed 42 validation: {'accuracy': 0.8023, 'macro_f1': 0.8}
+[19:20:34] recorded ibo tfidf seed 42 test: {'accuracy': 0.8058, 'macro_f1': 0.8012, 'train_time_s': 11.2504, 'n_features': 68841, 'device': 'cpu'}
+[19:20:37] loaded sentence-transformers/LaBSE on cuda in 2.8 s
+[19:22:27] recorded ibo labse seed 42 validation: {'accuracy': 0.6491, 'macro_f1': 0.6449}
+[19:22:27] recorded ibo labse seed 42 test: {'accuracy': 0.6325, 'macro_f1': 0.6067, 'train_time_s': 10.4849, 'encode_time_s': 8.9058, 'fit_time_s': 1.5791, 'peak_gpu_gib': 2.0471, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:28:56] ibo afroxlmr seed 42: trained in 387 s, peak 4.88 GiB; train loss by epoch 0.8561, 0.6236, 0.5214; validation macro F1 by epoch 0.7004, 0.7178, 0.7384; best epoch 3
+[19:28:58] recorded ibo afroxlmr seed 42 validation: {'accuracy': 0.7458, 'macro_f1': 0.7384, 'best_epoch': 3}
+[19:28:58] recorded ibo afroxlmr seed 42 test: {'accuracy': 0.739, 'macro_f1': 0.7291, 'train_time_s': 386.8853, 'peak_gpu_gib': 4.8762, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:30:51] ibo afroxlmr seed 43: trained in 111 s, peak 4.89 GiB; train loss by epoch 0.8433, 0.6170, 0.5112; validation macro F1 by epoch 0.6722, 0.7381, 0.7443; best epoch 3
+[19:30:52] recorded ibo afroxlmr seed 43 validation: {'accuracy': 0.7512, 'macro_f1': 0.7443, 'best_epoch': 3}
+[19:30:52] recorded ibo afroxlmr seed 43 test: {'accuracy': 0.7452, 'macro_f1': 0.7368, 'train_time_s': 111.3702, 'peak_gpu_gib': 4.8916, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:32:56] ibo afroxlmr seed 44: trained in 122 s, peak 4.89 GiB; train loss by epoch 0.8265, 0.6030, 0.5051; validation macro F1 by epoch 0.6922, 0.7256, 0.7391; best epoch 3
+[19:32:58] recorded ibo afroxlmr seed 44 validation: {'accuracy': 0.7469, 'macro_f1': 0.7391, 'best_epoch': 3}
+[19:32:58] recorded ibo afroxlmr seed 44 test: {'accuracy': 0.7458, 'macro_f1': 0.7333, 'train_time_s': 122.1371, 'peak_gpu_gib': 4.8928, 'best_epoch': 3, 'device': 'cuda'}
+[19:32:58] === hau: 13957 train, 2677 validation, 5303 test ===
+[19:33:41] recorded hau tfidf seed 42 validation: {'accuracy': 0.7811, 'macro_f1': 0.7825}
+[19:33:41] recorded hau tfidf seed 42 test: {'accuracy': 0.7513, 'macro_f1': 0.7478, 'train_time_s': 24.6139, 'n_features': 83366, 'device': 'cpu'}
+[19:33:43] loaded sentence-transformers/LaBSE on cuda in 2.3 s
+[19:34:02] recorded hau labse seed 42 validation: {'accuracy': 0.7135, 'macro_f1': 0.7147}
+[19:34:02] recorded hau labse seed 42 test: {'accuracy': 0.6396, 'macro_f1': 0.6053, 'train_time_s': 16.0324, 'encode_time_s': 14.7408, 'fit_time_s': 1.2916, 'peak_gpu_gib': 2.1064, 'n_features': 768, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:40:13] hau afroxlmr seed 42: trained in 368 s, peak 4.92 GiB; train loss by epoch 0.7202, 0.5447, 0.4579; validation macro F1 by epoch 0.7442, 0.7690, 0.7796; best epoch 3
+[19:40:15] recorded hau afroxlmr seed 42 validation: {'accuracy': 0.78, 'macro_f1': 0.7796, 'best_epoch': 3}
+[19:40:15] recorded hau afroxlmr seed 42 test: {'accuracy': 0.7603, 'macro_f1': 0.7592, 'train_time_s': 368.2273, 'peak_gpu_gib': 4.9152, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:44:16] hau afroxlmr seed 43: trained in 240 s, peak 4.89 GiB; train loss by epoch 0.7229, 0.5424, 0.4692; validation macro F1 by epoch 0.7444, 0.7780, 0.7865; best epoch 3
+[19:44:18] recorded hau afroxlmr seed 43 validation: {'accuracy': 0.7867, 'macro_f1': 0.7865, 'best_epoch': 3}
+[19:44:18] recorded hau afroxlmr seed 43 test: {'accuracy': 0.7554, 'macro_f1': 0.7536, 'train_time_s': 239.5747, 'peak_gpu_gib': 4.8914, 'best_epoch': 3, 'device': 'cuda'}
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[19:49:30] hau afroxlmr seed 44: trained in 311 s, peak 4.89 GiB; train loss by epoch 0.7184, 0.5422, 0.4623; validation macro F1 by epoch 0.7421, 0.7799, 0.7870; best epoch 3
+[19:49:32] recorded hau afroxlmr seed 44 validation: {'accuracy': 0.7874, 'macro_f1': 0.787, 'best_epoch': 3}
+[19:49:32] recorded hau afroxlmr seed 44 test: {'accuracy': 0.7541, 'macro_f1': 0.7522, 'train_time_s': 310.558, 'peak_gpu_gib': 4.8888, 'best_epoch': 3, 'device': 'cuda'}
+[19:49:33] done

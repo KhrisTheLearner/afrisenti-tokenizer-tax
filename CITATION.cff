@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code, the tables or the adversarial suite, please cite the paper."
+title: "Tokenizer Tax and Downstream Performance in Twelve African Languages"
+type: software
+authors:
+  - family-names: Mumaragishyika
+    given-names: Christophe
+    affiliation: "University of Missouri"
+repository-code: "https://github.com/KhrisTheLearner/afrisenti-tokenizer-tax"
+license: MIT
+keywords:
+  - tokenization
+  - African languages
+  - sentiment analysis
+  - AfriSenti
+  - Kinyarwanda
+preferred-citation:
+  type: unpublished
+  title: "Tokenizer Tax and Downstream Performance in Twelve African Languages"
+  authors:
+    - family-names: Mumaragishyika
+      given-names: Christophe
+      affiliation: "University of Missouri"
+  year: 2026
+  notes: "Manuscript"
+  url: "https://github.com/KhrisTheLearner/afrisenti-tokenizer-tax"
