@@ -1,10 +1,12 @@
 # Tokenizer tax and downstream performance in twelve African languages
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23443962.svg)](https://doi.org/10.5281/zenodo.23443962)
+
 A subword tokenizer built mostly on English cuts the words of many African languages into more pieces than English words. People call this the token tax. In a preliminary study on Kinyarwanda, my first language, fine-tuning a pretrained model beat a simple TF-IDF baseline by six macro F1 points. This repository asks whether that holds across languages: does the number of subword tokens a vocabulary spends on a word predict how much a pretrained model gains over TF-IDF?
 
 I ran the same three sentiment pipelines, with identical settings and seeds, on the twelve [AfriSenti](https://huggingface.co/datasets/shmuhammad/AfriSenti-twitter-sentiment) languages that have training splits: TF-IDF with logistic regression, frozen LaBSE embeddings with the same classifier, and AfroXLMR-base fine-tuned with three seeds. That makes 60 runs. The test of the main question was fixed before the runs.
 
-The paper is in [`paper/`](paper/Mumaragishyika_2026_tokenizer_tax.pdf).
+The paper is in [`paper/`](paper/Mumaragishyika_2026_tokenizer_tax.pdf). The code, results and suite are archived on Zenodo at [10.5281/zenodo.23443962](https://doi.org/10.5281/zenodo.23443962), which always points to the latest version; version v1.0.0 is [10.5281/zenodo.23443963](https://doi.org/10.5281/zenodo.23443963).
 
 ## What I found
 
@@ -104,6 +106,8 @@ The code is under the MIT License. The suite and the tables are under CC BY 4.0.
 
 ## Citation
 
+Please cite the paper:
+
 ```bibtex
 @misc{mumaragishyika2026tokenizertax,
   title  = {Tokenizer Tax and Downstream Performance in Twelve African Languages},
@@ -111,6 +115,20 @@ The code is under the MIT License. The suite and the tables are under CC BY 4.0.
   year   = {2026},
   note   = {Manuscript},
   url    = {https://github.com/KhrisTheLearner/afrisenti-tokenizer-tax}
+}
+```
+
+To cite the exact code and results behind the paper, cite the archived release:
+
+```bibtex
+@software{mumaragishyika2026tokenizertaxcode,
+  author    = {Mumaragishyika, Christophe},
+  title     = {Tokenizer Tax and Downstream Performance in Twelve African Languages: code and results},
+  version   = {v1.0.0},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23443963},
+  url       = {https://doi.org/10.5281/zenodo.23443963}
 }
 ```
 

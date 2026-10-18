@@ -8,6 +8,7 @@ authors:
     affiliation: "University of Missouri"
 repository-code: "https://github.com/KhrisTheLearner/afrisenti-tokenizer-tax"
 license: MIT
+doi: 10.5281/zenodo.23443962
 keywords:
   - tokenization
   - African languages

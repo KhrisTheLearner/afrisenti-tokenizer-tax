@@ -1,0 +1,3 @@
+# ACL's style files are third-party, so they don't count toward the repository's languages
+paper/acl.sty linguist-vendored
+paper/acl_natbib.bst linguist-vendored
